@@ -1,0 +1,73 @@
+				Primeira Iteração
+
+		Expressão			Saída Esperada	     Saída de Fato
+
+	printf("\n\ni = %d", i);			0		0
+
+	printf("vet[%d] = %.1f",i, vet[i]);		1.1		1.1
+
+	printf("*(f + %d) = %.1f",i, *(f+i));		1.1		1.1
+
+	printf("&vet[%d] = %X",i, &vet[i]);		61FF04		61FF04
+
+	printf("(f + %d) = %X",i, f+i);			61FF04		61FF04
+
+
+				Segunda Iteração
+
+		Expressão			Saída Esperada	     Saída de Fato 
+
+	printf("\n\ni = %d", i);			1		1
+
+	printf("vet[%d] = %.1f",i, vet[i]);		2.2		2.2
+
+	printf("*(f + %d) = %.1f",i, *(f+i));		2.2		2.2
+
+	printf("&vet[%d] = %X",i, &vet[i]);		61FF08		61FF08
+
+	printf("(f + %d) = %X",i, f+i);			61FF08		61FF08
+
+				
+				Terceira Iteração
+
+		Expressão 			Saída Esperada       Saída de Fato
+
+	printf("\n\ni = %d", i);			2		2
+
+	printf("vet[%d] = %.1f",i, vet[i]);		3.3		3.3
+
+	printf("*(f + %d) = %.1f",i, *(f+i));		3.3		3.3
+
+	printf("&vet[%d] = %X",i, &vet[i]);		61FF0C		61FF0C
+
+	printf("(f + %d) = %X",i, f+i);			61FF0C		61FF0C
+
+
+				Quarta Iteração
+
+		Expressão 			Saída Esperada       Saída de Fato
+
+	printf("\n\ni = %d", i);			3		3
+
+	printf("vet[%d] = %.1f",i, vet[i]);		4.4		4.4
+
+	printf("*(f + %d) = %.1f",i, *(f+i));		4.4		4.4
+
+	printf("&vet[%d] = %X",i, &vet[i]);		61FF10		61FF10
+
+	printf("(f + %d) = %X",i, f+i);			61FF10		61FF10
+
+
+				Quinta Iteração
+
+		Expressão 			Saída Esperada       Saída de Fato
+
+	printf("\n\ni = %d", i);			4		4
+
+	printf("vet[%d] = %.1f",i, vet[i]);		5.5		5.5
+
+	printf("*(f + %d) = %.1f",i, *(f+i));		5.5		5.5
+
+	printf("&vet[%d] = %X",i, &vet[i]);		61FF14		61FF14
+
+	printf("(f + %d) = %X",i, f+i);			61FF14		61FF14

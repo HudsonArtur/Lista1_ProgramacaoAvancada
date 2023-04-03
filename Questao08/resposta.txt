@@ -1,0 +1,8 @@
+Primeiro Main: 
+
+Cria um vetor inteiro de três posições com valores atribuídos e cria uma variável inteira.
+Em seguida mostra na tela os elementos do vetor inteiro. O desenvolvedor usou uma técnica para "caminhar no vetor", que utiliza do ponteiro "*" para referenciar o valor do endereço do vetor, endereço que é somado com a variável inteira criada anteriormente e que está sendo somada com um (1) a cada nova iteração.
+
+Segundo Main:
+
+Cria um vetor inteiro de três posições com valores atribuídos e uma variável inteira. Em seguida mostra na tela os endereços de cada elemento do vetor em Hexadecimal.

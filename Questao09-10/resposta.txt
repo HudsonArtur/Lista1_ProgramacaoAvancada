@@ -1,0 +1,65 @@
+"x" vale 4092
+"x" como um char:
+
+Expressão: x+1
+Saída: 4093
+
+Expressão: x+2
+Saída: 4094
+
+Expressão: x+3
+Saída: 4095
+
+Expressão: x+4
+Saída: 4096
+
+-----------------------
+
+"x" vale 4092
+"x" como um int:
+
+Expressão: x+1
+Saída: 4094
+
+Expressão: x+2
+Saída: 4096
+
+Expressão: x+3
+Saída: 4098
+
+Expressão: x+4
+Saída: 409A
+
+-----------------------
+
+"x" vale 4092
+"x" como um float:
+
+Expressão: x+1
+Saída: 4096
+
+Expressão: x+2
+Saída: 409A
+
+Expressão: x+3
+Saída: 40A4
+
+Expressão: x+4
+Saída: 40A8
+
+----------------------
+
+"x" vale 4092
+"x" como um double:
+
+Expressão: x+1
+Saída: 409A
+
+Expressão: x+2
+Saída: 40A8
+
+Expressão: x+3
+Saída: 40B6
+
+Expressão: x+4
+Saída: 40C4

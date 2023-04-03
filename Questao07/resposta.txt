@@ -1,0 +1,7 @@
+p = mat + 1;     * Válida, como já visto em outras questões a linguagem c/c++ aceita esse 		 tipo de atribuição. Sendo lida da seguinte forma: "ponteiro para inteiro 		 recebe o endereço do vetor mat na posição 0 + 1";
+
+p = mat++;	 * Inválida, a linguagem C/C++ considera esta expressão um erro. O vetor 		 não pode ser interado dessa forma. 
+
+p = ++mat;	 * Inválida, parecida com a expressão anterior, só trocando a ordem dos 		 fatores. Não muda o resultado final, ainda causa o mesmo erro.
+
+x = (*mat)++;    * Válida, parece muito complicado, mas não é realmente. O asterisco 		 dentro do parêntese e na frente do vetor, faz com que o valor da primeira 		 posição do vetor seja recuperado e o "++" soma um (1) ao valor recupado.

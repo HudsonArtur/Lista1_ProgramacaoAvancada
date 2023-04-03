@@ -1,0 +1,7 @@
+*(pulo + 2); <------ Esta expressão referencia a terceira possição do vetor.
+
+*(pulo + 4);
+
+pulo + 4;
+
+pulo + 2;
