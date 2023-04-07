@@ -1,65 +1,81 @@
-"x" vale 4092
-"x" como um char:
+"x" tem endereço: 4092
+Endereço de "x" como um char: 0061FECC
 
 Expressão: x+1
-Saída: 4093
+Saída Esperada: 4093 
+Saída do terminal: 0061FECD
 
 Expressão: x+2
-Saída: 4094
+Saída Esperada: 4094
+Saída do terminal: 0061FECE
 
 Expressão: x+3
-Saída: 4095
+Saída Esperada: 4095
+Saída do terminal: 0061FECF
 
 Expressão: x+4
-Saída: 4096
+Saída Esperada: 4096
+Saída do terminal: 0061FED0
 
 -----------------------
 
-"x" vale 4092
-"x" como um int:
+"x" tem endereço: 4092
+Endereço de "x" como um int: 0061FEAC
 
 Expressão: x+1
-Saída: 4094
+Saída Esperada: 4094
+Saída do terminal: 0061FEB0
 
 Expressão: x+2
-Saída: 4096
+Saída Esperada: 4096
+Saída do terminal: 0061FEB4
 
 Expressão: x+3
-Saída: 4098
+Saída Esperada: 4098
+Saída do terminal: 0061FEB8
 
 Expressão: x+4
-Saída: 409A
+Saída Esperada: 409A
+Saída do terminal: 0061FEBC
 
 -----------------------
 
-"x" vale 4092
-"x" como um float:
+"x" tem endereço: 4092
+Endereço de "x" como um float: 0061FE8C
 
 Expressão: x+1
-Saída: 4096
+Saída Esperada: 4096
+Saída do terminal: 0061FE90
 
 Expressão: x+2
-Saída: 409A
+Saída Esperada: 409A
+Saída do terminal: 0061FE94
 
 Expressão: x+3
-Saída: 40A4
+Saída Esperada: 40A4
+Saída do terminal: 0061FE98
 
 Expressão: x+4
-Saída: 40A8
+Saída Esperada: 40A8
+Saída do terminal: 0061FE9C
 
 ----------------------
 
-"x" vale 4092
-"x" como um double:
+"x" tem endereço: 4092
+Endereço de "x" como um double: 0061FE60
 
 Expressão: x+1
-Saída: 409A
+Saída Esperada: 409A
+Saída do terminal: 0061FE68
 
 Expressão: x+2
-Saída: 40A8
+Saída Esperada: 40A8
+Saída do terminal: 0061FE70
 
 Expressão: x+3
-Saída: 40B6
+Saída Esperada: 40B6
+Saída do terminal: 0061FE78
 
 Expressão: x+4
-Saída: 40C4
+Saída Esperada: 40C4
+Saída do terminal: 0061FE80

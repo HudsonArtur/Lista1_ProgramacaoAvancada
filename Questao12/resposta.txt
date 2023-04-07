@@ -1,0 +1,5 @@
+Tal qual como os ponteiros para variáveis normais, o ponteiro para função funciona com a
+referenciação do endereço de memória da função. Estes ponteiros para funções podem ser usados como argumentos para outras funções, e a função apontada pode ser chamada pelo seu ponteiro. 
+
+O uso de ponteiros para funções tem sua principal funcionalidade definir, em tempo de execução, qual função será executada, não necessitando de se utilizar o nome da função,
+de forma explícita, naquele trecho de código.
