@@ -14,7 +14,7 @@ int main()
     int quantNum = 0, i;
 
     printf("Quantos numeros voce prentende digitar: ");
-    scanf("%d", quantNum);
+    scanf("%d", &quantNum);
 
     vetorOrdenado = (float *)malloc(quantNum * sizeof(float));
 
@@ -36,7 +36,6 @@ int main()
 
     free(vetorOrdenado);
     vetorOrdenado = NULL;
-    free(vetorOrdenado);
 
     return 0;
 }
@@ -46,7 +45,7 @@ void RearranjoFloat(float *vetorOrdenado, int quantNum)
     float inter;
     for (int i = 0; i < quantNum; i++)
     {
-        for (int j = 0; j < quantNum; j++)
+        for (int j = i; j < quantNum; j++)
         {
             if (vetorOrdenado[i] > vetorOrdenado[j])
             {
