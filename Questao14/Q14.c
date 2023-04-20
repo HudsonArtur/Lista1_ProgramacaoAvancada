@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 // Função criada para organizar na ordem crescente
 // n números do tipo float.
@@ -13,6 +14,7 @@ int main()
 
     float *vetorOrdenado; // Declaração do ponteiro para float
     int quantNum = 0, i;  // Declaração das variáveis auxiliares
+    double tempoPerdido, tempoFim, tempoInicio;
 
     // Parte do código que solicita o tamanho do vetor ao usuário
     printf("Quantos numeros voce prentende digitar: ");
@@ -30,14 +32,21 @@ int main()
     printf("\nVetor Desordenado: ");
 
     mostrarVetor(vetorOrdenado, quantNum);
+
     // Chamada da função qsort(), função utilizada para ordenação de vetores
     // seus parâmetros são (vetor_A_Ser_Ordenado, tamanho_do_vetor, sizeof(tipo_do_vetor), funcao_comparacao)
+    tempoInicio = clock();
     qsort(vetorOrdenado, quantNum, sizeof(float), RearranjoFloat);
+    tempoFim = clock();
 
     printf("\nVetor Ordenado: ");
 
     mostrarVetor(vetorOrdenado, quantNum);
+    
+    tempoPerdido = (double) (tempoFim - tempoInicio);
 
+    printf("\n\nTempo de processamento: %f", tempoPerdido);
+    
     free(vetorOrdenado);  // Libera a memória
     vetorOrdenado = NULL; // Atribui valor nulo ao vetor
 

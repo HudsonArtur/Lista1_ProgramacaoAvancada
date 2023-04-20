@@ -1,6 +1,6 @@
 aloha[2] = value;          // Válido
 
-scanf("%f", &aloha);       // Inválido
+scanf("%f", &aloha);       // Válido
 
 aloha = value;		   // Inválido
 
