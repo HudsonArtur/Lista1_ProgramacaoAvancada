@@ -14,7 +14,7 @@ int main()
 
     float *vetorOrdenado; // Declaração do ponteiro para float
     int quantNum = 0, i;  // Declaração das variáveis auxiliares
-    double tempoPerdido, tempoFim, tempoInicio;
+    clock_t tempoPerdido;
 
     // Parte do código que solicita o tamanho do vetor ao usuário
     printf("Quantos numeros voce prentende digitar: ");
@@ -35,17 +35,18 @@ int main()
 
     // Chamada da função qsort(), função utilizada para ordenação de vetores
     // seus parâmetros são (vetor_A_Ser_Ordenado, tamanho_do_vetor, sizeof(tipo_do_vetor), funcao_comparacao)
-    tempoInicio = clock();
-    qsort(vetorOrdenado, quantNum, sizeof(float), RearranjoFloat);
-    tempoFim = clock();
+    tempoPerdido = clock();
+    for(i = 0; i < 1000000; i++)
+    {
+        qsort(vetorOrdenado, quantNum, sizeof(float), RearranjoFloat);
+    }
+    tempoPerdido = clock() - tempoPerdido;
 
     printf("\nVetor Ordenado: ");
 
     mostrarVetor(vetorOrdenado, quantNum);
-    
-    tempoPerdido = (double) (tempoFim - tempoInicio);
 
-    printf("\n\nTempo de processamento: %f", tempoPerdido);
+    printf("\n\nTempo de processamento: %f", ((float)tempoPerdido) / CLOCKS_PER_SEC);
     
     free(vetorOrdenado);  // Libera a memória
     vetorOrdenado = NULL; // Atribui valor nulo ao vetor
