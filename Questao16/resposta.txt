@@ -1,0 +1,1 @@
+Como registrado nos prints anexados. A resolução da questão 15, que utiliza do ponteiro para função, é mais rápida do que resolução da questão 14, que chama a função diretamente.
