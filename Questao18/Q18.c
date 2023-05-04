@@ -6,11 +6,18 @@
 // Multiplicação na forma AB.
 void multiMatriz(int **matA, int **matB, int **matC, int linA, int colA, int colB);
 
-// Protótipo para a função para povoar matrizes
+// Função para povoar matrizes
 void povoaMatriz(int **mat, int linhas, int colunas);
 
-// Protótipo para a função que mostra a matriz na tela
+// Função que mostra a matriz na tela
 void printaMatriz(int **mat, int linhas, int colunas);
+
+// Função para alocação de memória
+//void alocaMemory(int **mat, int linhas, int colunas);
+
+// Função que libera a memória utilizada e
+// atribue null para os ponteiros
+void liberaMemory(int **mat, int linhas);
 
 int main()
 {
@@ -20,7 +27,6 @@ int main()
 
     int **matA, **matB, **matC;
 
-    // aloca um vetor de 3 posições para as linhas
     matA = malloc(LinA * sizeof(int *));
     matB = malloc(ColA * sizeof(int *));
     matC = malloc(LinA * sizeof(int *));
@@ -33,13 +39,20 @@ int main()
 
     for (int i = 0; i < ColA; i++)
     {
-        matA[i] = malloc(ColB * sizeof(int));
+        matB[i] = malloc(ColB * sizeof(int));
     }
     for (int i = 0; i < LinA; i++)
     {
-        matA[i] = malloc(ColB * sizeof(int));
+        matC[i] = malloc(ColB * sizeof(int));
     }
 
+/* 
+    alocaMemory(matA,LinA,ColA);
+    
+    alocaMemory(matB,ColA,ColB);
+
+    alocaMemory(matC,LinA,ColB);
+*/
     printf("Povoe a matriz A: ");
     povoaMatriz(matA, LinA, ColA);
 
@@ -48,14 +61,20 @@ int main()
 
     multiMatriz(matA, matB, matC, LinA, ColA, ColB);
 
-    printf("\n******MATRIZ A******\n");
+    printf("\n******MATRIZ A******");
     printaMatriz(matA, LinA, ColA);
 
-    printf("\n\n******MATRIZ B******\n");
+    printf("\n\n******MATRIZ B******");
     printaMatriz(matB, ColA, ColB);
 
     printf("\n\n******MATRIZ RESULTANTE******\n");
     printaMatriz(matC, LinA, ColB);
+
+    liberaMemory(matA, LinA);
+
+    liberaMemory(matB, ColA);
+    
+    liberaMemory(matC, LinA);
 
     return 0;
 }
@@ -98,4 +117,22 @@ void printaMatriz(int **mat, int linhas, int colunas)
         }
         printf("\n");
     }
+}
+/*
+void alocaMemory(int **mat, int linhas, int colunas){
+    mat = malloc(linhas * sizeof(int *));
+    for (int i = 0; i < linhas; i++)
+    {
+        mat[i] = malloc(colunas * sizeof(int));
+    }
+}
+*/
+void liberaMemory(int **mat, int linhas){
+    for (int i = 0; i < linhas; i++)
+    {
+        free(mat[i]);
+    }
+
+    free(mat);
+    mat = NULL;
 }
