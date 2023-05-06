@@ -12,8 +12,8 @@ void povoaMatriz(int **mat, int linhas, int colunas);
 // Função que mostra a matriz na tela
 void printaMatriz(int **mat, int linhas, int colunas);
 
-// Função para alocação de memória
-//void alocaMemory(int **mat, int linhas, int colunas);
+// Função para alocação de memória para matrizes
+int ** alocaMemory(int linhas, int colunas);
 
 // Função que libera a memória utilizada e
 // atribue null para os ponteiros
@@ -27,32 +27,12 @@ int main()
 
     int **matA, **matB, **matC;
 
-    matA = malloc(LinA * sizeof(int *));
-    matB = malloc(ColA * sizeof(int *));
-    matC = malloc(LinA * sizeof(int *));
-
-    // aloca cada uma das linhas (vetores de linhas inteiros)
-    for (int i = 0; i < LinA; i++)
-    {
-        matA[i] = malloc(ColA * sizeof(int));
-    }
-
-    for (int i = 0; i < ColA; i++)
-    {
-        matB[i] = malloc(ColB * sizeof(int));
-    }
-    for (int i = 0; i < LinA; i++)
-    {
-        matC[i] = malloc(ColB * sizeof(int));
-    }
-
-/* 
-    alocaMemory(matA,LinA,ColA);
+    matA = alocaMemory(LinA,ColA);
     
-    alocaMemory(matB,ColA,ColB);
+    matB = alocaMemory(ColA,ColB);
 
-    alocaMemory(matC,LinA,ColB);
-*/
+    matC = alocaMemory(LinA,ColB);
+
     printf("Povoe a matriz A: ");
     povoaMatriz(matA, LinA, ColA);
 
@@ -61,10 +41,10 @@ int main()
 
     multiMatriz(matA, matB, matC, LinA, ColA, ColB);
 
-    printf("\n******MATRIZ A******");
+    printf("\n******MATRIZ A******\n");
     printaMatriz(matA, LinA, ColA);
 
-    printf("\n\n******MATRIZ B******");
+    printf("\n\n******MATRIZ B******\n");
     printaMatriz(matB, ColA, ColB);
 
     printf("\n\n******MATRIZ RESULTANTE******\n");
@@ -118,15 +98,18 @@ void printaMatriz(int **mat, int linhas, int colunas)
         printf("\n");
     }
 }
-/*
-void alocaMemory(int **mat, int linhas, int colunas){
-    mat = malloc(linhas * sizeof(int *));
+
+int ** alocaMemory(int linhas, int colunas){
+    int **mat;
+
+    mat = malloc(linhas * sizeof(int **));
     for (int i = 0; i < linhas; i++)
     {
-        mat[i] = malloc(colunas * sizeof(int));
+        mat[i] = malloc(colunas * sizeof(int*));
     }
+    return mat;
 }
-*/
+
 void liberaMemory(int **mat, int linhas){
     for (int i = 0; i < linhas; i++)
     {
