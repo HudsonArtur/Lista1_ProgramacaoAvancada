@@ -52,11 +52,11 @@ Saída Esperada: 409A
 Saída do terminal: 0061FE94
 
 Expressão: x+3
-Saída Esperada: 40A4
+Saída Esperada: 40AE
 Saída do terminal: 0061FE98
 
 Expressão: x+4
-Saída Esperada: 40A8
+Saída Esperada: 40A2
 Saída do terminal: 0061FE9C
 
 ----------------------
@@ -69,13 +69,13 @@ Saída Esperada: 409A
 Saída do terminal: 0061FE68
 
 Expressão: x+2
-Saída Esperada: 40A8
+Saída Esperada: 40A2
 Saída do terminal: 0061FE70
 
 Expressão: x+3
-Saída Esperada: 40B6
+Saída Esperada: 40AA
 Saída do terminal: 0061FE78
 
 Expressão: x+4
-Saída Esperada: 40C4
+Saída Esperada: 40B2
 Saída do terminal: 0061FE80
